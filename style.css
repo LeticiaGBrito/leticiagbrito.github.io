@@ -1,0 +1,489 @@
+/* ========================================
+   CORES PRINCIPAIS
+======================================== */
+:root {
+  --fundo: #faf9f6;
+  --azul: #123047;
+  --verde: #087f8c;
+  --texto: #526477;
+  --borda: #dce3e7;
+  --verde-claro: #e2f2ef;
+}
+
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+======================================== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+}
+
+body {
+  margin: 0;
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  width: min(1120px, 90%);
+  margin-inline: auto;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--azul);
+  line-height: 1.2;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--verde);
+  outline-offset: 5px;
+}
+
+/* ========================================
+   CABEÇALHO E MENU
+======================================== */
+.cabecalho {
+  border-bottom: 1px solid var(--borda);
+}
+
+.navegacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding-block: 20px;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--azul);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.monograma {
+  font-family: Georgia, serif;
+  font-size: 32px;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.menu a {
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.menu a:hover {
+  color: var(--verde);
+}
+
+/* ========================================
+   APRESENTAÇÃO
+======================================== */
+.apresentacao {
+  padding-block: 80px;
+  background: radial-gradient(
+    circle at 90% 20%,
+    var(--verde-claro),
+    transparent 45%
+  );
+}
+
+.disponibilidade {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  border-radius: 30px;
+  background: var(--verde-claro);
+  color: var(--azul);
+  font-size: 13px;
+}
+
+.disponibilidade span {
+  color: var(--verde);
+}
+
+h1 {
+  margin: 24px 0 8px;
+  font-family: Georgia, serif;
+  font-size: clamp(40px, 6vw, 72px);
+}
+
+.cargo {
+  margin: 0;
+  color: var(--verde);
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+.apresentacao h2 {
+  max-width: 650px;
+  margin-top: 32px;
+  font-family: Georgia, serif;
+  font-size: clamp(30px, 4vw, 44px);
+}
+
+.descricao {
+  max-width: 600px;
+  font-size: 19px;
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+/* ========================================
+   BOTÕES
+======================================== */
+.botao {
+  display: inline-block;
+  padding: 12px 22px;
+  border: 1px solid var(--verde);
+  border-radius: 6px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.botao-principal {
+  background: var(--verde);
+  color: white;
+}
+
+.botao-principal:hover {
+  background: #066571;
+}
+
+.botao-secundario {
+  color: var(--azul);
+  background: transparent;
+}
+
+.botao-secundario:hover {
+  background: var(--verde-claro);
+}
+
+/* ========================================
+   SEÇÕES
+======================================== */
+.secao {
+  padding-block: 50px;
+  border-top: 1px solid var(--borda);
+}
+
+.titulo-secao {
+  margin-top: 0;
+  font-family: Georgia, serif;
+  font-size: 30px;
+}
+
+.titulo-secao::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  margin-top: 12px;
+  background: var(--verde);
+}
+
+/* ========================================
+   SOBRE MIM
+======================================== */
+.sobre-texto {
+  max-width: 850px;
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+.sobre-texto p {
+  margin: 0 0 20px;
+}
+
+.sobre-texto p:last-child {
+  margin-bottom: 0;
+}
+
+.sobre-texto .sobre-destaque {
+  max-width: 720px;
+  margin-bottom: 28px;
+  color: var(--azul);
+  font-size: clamp(21px, 3vw, 26px);
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+/* ========================================
+   COMPETÊNCIAS
+======================================== */
+.competencias-intro {
+  max-width: 720px;
+  margin: -4px 0 28px;
+  font-size: 17px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.card {
+  min-width: 0;
+  padding: 28px;
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  background: white;
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 21px;
+  line-height: 1.35;
+}
+
+.card p {
+  margin-bottom: 0;
+}
+
+#competencias .card {
+  display: flex;
+  flex-direction: column;
+}
+
+#competencias .card > p:not(.card-tecnologias) {
+  margin-top: 0;
+  margin-bottom: 22px;
+}
+
+#competencias .card .card-tecnologias {
+  margin-top: auto;
+  margin-bottom: 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--borda);
+  color: var(--verde);
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+/* ========================================
+   CONTATO
+======================================== */
+.contato {
+  text-align: center;
+}
+
+.contato .titulo-secao::after {
+  margin-inline: auto;
+}
+
+.contato > .container > p {
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.contato-acoes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.contato-acoes .botao {
+  min-width: 180px;
+}
+
+.contato .contato-email {
+  margin-top: 24px;
+  font-size: 15px;
+}
+
+.contato-email a {
+  color: var(--verde);
+  font-weight: bold;
+  text-underline-offset: 4px;
+  overflow-wrap: anywhere;
+}
+
+/* ========================================
+   RODAPÉ
+======================================== */
+.rodape {
+  padding-block: 18px;
+  border-top: 1px solid var(--borda);
+  font-size: 13px;
+}
+
+/* ========================================
+   TABLETS: DUAS COLUNAS
+======================================== */
+@media (min-width: 701px) and (max-width: 1000px) {
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ========================================
+   CELULARES: UMA COLUNA
+======================================== */
+@media (max-width: 700px) {
+  .navegacao {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    gap: 18px;
+  }
+
+  .apresentacao {
+    padding-block: 50px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .acoes {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 600px) {
+  .contato-acoes {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* ========================================
+   ACESSIBILIDADE: REDUÇÃO DE MOVIMENTO
+======================================== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .botao {
+    transition: none;
+  }
+}
+
+/* ========================================
+   PROJETOS E ESTUDOS DE CASO
+======================================== */
+.projetos-intro {
+  max-width: 800px;
+  margin-bottom: 28px;
+  font-size: 17px;
+}
+
+#projetos .cards {
+  align-items: start;
+}
+
+.projeto-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.projeto-categoria {
+  align-self: flex-start;
+  margin-bottom: 18px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: var(--verde-claro);
+  color: var(--azul);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.projeto-card h3 {
+  margin-bottom: 16px;
+}
+
+.projeto-card .projeto-resumo {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.projeto-card .projeto-tecnologias {
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: var(--verde);
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.8;
+}
+
+.projeto-detalhes {
+  border-top: 1px solid var(--borda);
+}
+
+.projeto-detalhes summary {
+  padding-block: 16px;
+  color: var(--azul);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.projeto-detalhes summary:hover {
+  color: var(--verde);
+}
+
+.projeto-detalhes summary:focus-visible {
+  outline: 3px solid var(--verde);
+  outline-offset: 4px;
+}
+
+.projeto-detalhes[open] summary {
+  margin-bottom: 8px;
+}
+
+.projeto-relato h4 {
+  margin: 20px 0 8px;
+  color: var(--azul);
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.projeto-relato h4:first-child {
+  margin-top: 0;
+}
+
+.projeto-relato p {
+  margin: 0 0 16px;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.projeto-relato p:last-child {
+  margin-bottom: 0;
+}
