@@ -2,41 +2,40 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Letícia Gonçalves Garcia | QA Sênior</title>
 
   <meta
     name="description"
-    content="Portfólio de Letícia Gonçalves Garcia, QA Sênior com experiência em automação web, APIs e integrações."
+    content="Portfólio de Letícia Gonçalves Garcia, QA Sênior. Experiência em automação web, APIs, mobile e integrações. Projetos com Java e Python, testes automatizados e CI/CD."
   >
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <!-- Cabeçalho e navegação -->
+  <a class="pular-conteudo" href="#conteudo">
+    Pular para o conteúdo
+  </a>
+
   <header class="cabecalho">
     <nav class="container navegacao" aria-label="Menu principal">
       <a class="marca" href="#inicio">
-        <span class="monograma">LG</span>
+        <span class="monograma" aria-hidden="true">LG</span>
         <span>Letícia Gonçalves Garcia</span>
       </a>
 
-    <div class="menu">
-      <a href="#sobre">Sobre</a>
-      <a href="#competencias">Competências</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#contato">Contato</a>
-    </div>
+      <div class="menu">
+        <a href="#sobre">Sobre</a>
+        <a href="#competencias">Competências</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </div>
     </nav>
   </header>
 
-  <main>
+  <main id="conteudo" tabindex="-1">
     <!-- Apresentação -->
     <section id="inicio" class="apresentacao">
       <div class="container">
@@ -59,12 +58,12 @@
         </p>
 
         <div class="acoes">
-          <a class="botao botao-principal" href="#sobre">
-            Conheça minha experiência →
+          <a class="botao botao-principal" href="#projetos">
+            Conheça meus projetos →
           </a>
 
           <a class="botao botao-secundario" href="#contato">
-            Contato
+            Entre em contato
           </a>
         </div>
       </div>
@@ -73,6 +72,7 @@
     <!-- Sobre mim -->
     <section id="sobre" class="secao">
       <div class="container">
+        <p class="rotulo-secao">Minha trajetória</p>
         <h2 class="titulo-secao">Sobre mim</h2>
 
         <div class="sobre-texto">
@@ -112,12 +112,13 @@
       </div>
     </section>
 
-    <!-- Competências técnicas -->
-    <section id="competencias" class="secao">
+    <!-- Competências -->
+    <section id="competencias" class="secao secao-alternada">
       <div class="container">
+        <p class="rotulo-secao">Conhecimentos e práticas</p>
         <h2 class="titulo-secao">Competências técnicas</h2>
 
-        <p class="competencias-intro">
+        <p class="introducao">
           Conhecimentos que aplico no planejamento dos testes,
           na automação e na investigação de falhas.
         </p>
@@ -213,13 +214,241 @@
     <!-- Projetos e estudos de caso -->
     <section id="projetos" class="secao">
       <div class="container">
+        <p class="rotulo-secao">Qualidade na prática</p>
         <h2 class="titulo-secao">Projetos e estudos de caso</h2>
 
-        <p class="projetos-intro">
-          Experiências que demonstram minha atuação em automação,
-          investigação de falhas e validação de integrações.
-          Relatos apresentados sem identificação de empresas
-          ou exposição de dados internos.
+        <p class="introducao">
+          Projetos educacionais com código público e estudos de caso
+          da minha trajetória em qualidade de software. Os projetos
+          utilizam regras fictícias e os relatos profissionais são
+          apresentados sem identificação de empresas ou dados internos.
+        </p>
+
+        <h3 class="subtitulo-grupo">Projetos com código público</h3>
+
+        <p class="descricao-grupo">
+          Duas implementações de uma API fictícia de análise de crédito,
+          com testes automatizados, documentação interativa e publicação
+          na nuvem.
+        </p>
+
+        <div class="cards cards-projetos">
+          <!-- Projeto Java -->
+          <article class="card projeto-card projeto-destaque">
+            <span class="projeto-categoria">
+              Projeto educacional · Java
+            </span>
+
+            <h3>API de Crédito com Java</h3>
+
+            <p class="projeto-resumo">
+              API fictícia de análise de crédito com testes de regras
+              de negócio, respostas HTTP e documentação, contemplando
+              valores de fronteira e entradas inválidas.
+            </p>
+
+            <ul class="projeto-indicadores" aria-label="Destaques do projeto Java">
+              <li>35 testes automatizados</li>
+              <li>Swagger interativo</li>
+              <li>CI/CD</li>
+            </ul>
+
+            <p class="projeto-tecnologias">
+              Java 17 · RestAssured · JUnit 5 · Gradle · Gson ·
+              OpenAPI · Swagger UI · Docker · GitHub Actions · Render
+            </p>
+
+            <details class="projeto-detalhes">
+              <summary>Ver detalhes técnicos</summary>
+
+              <div class="projeto-relato">
+                <h4>Regras e cenários</h4>
+                <p>
+                  Validação de idade, renda mensal e valor solicitado,
+                  com critérios fictícios de aprovação. Os cenários
+                  verificam aprovação, reprovação, campos obrigatórios,
+                  valores de fronteira e requisições inválidas.
+                  Os valores monetários são tratados com BigDecimal.
+                </p>
+
+                <h4>Estratégia de testes</h4>
+                <p>
+                  Suíte com 35 testes: 19 testes unitários das regras
+                  de negócio, 8 testes HTTP da análise de crédito,
+                  7 testes HTTP da documentação e 1 teste HTTP inicial
+                  de verificação do ambiente. Os testes da API iniciam
+                  o servidor local automaticamente.
+                </p>
+
+                <h4>Integração e implantação contínuas</h4>
+                <p>
+                  O GitHub Actions executa os testes e disponibiliza
+                  os relatórios. Após a aprovação da etapa de testes,
+                  o workflow solicita o deploy do commit testado
+                  por um Deploy Hook. O Render constrói e executa
+                  a aplicação em Docker.
+                </p>
+
+                <h4>Demonstração interativa</h4>
+                <p>
+                  A interface Swagger UI utiliza uma especificação
+                  OpenAPI para apresentar os endpoints e permitir
+                  o envio de solicitações fictícias pelo navegador.
+                  Os testes verificam o HTML servido e campos
+                  selecionados da especificação.
+                </p>
+              </div>
+            </details>
+
+            <div class="projeto-links">
+              <a
+                class="botao botao-principal"
+                href="https://github.com/LeticiaGBrito/qa-credito-api"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ver código do projeto Java no GitHub"
+              >
+                Ver código
+              </a>
+
+              <a
+                class="botao botao-secundario"
+                href="https://github.com/LeticiaGBrito/qa-credito-api/actions"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ver testes e relatórios do projeto Java"
+              >
+                Testes e relatórios
+              </a>
+
+              <a
+                class="link-projeto"
+                href="https://qa-credito-api.onrender.com/docs"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Experimentar a API Java no Swagger"
+              >
+                Experimentar API no Swagger ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- Projeto Python -->
+          <article class="card projeto-card projeto-destaque">
+            <span class="projeto-categoria">
+              Projeto educacional · Python
+            </span>
+
+            <h3>API de Crédito com Python</h3>
+
+            <p class="projeto-resumo">
+              API fictícia de análise de crédito com separação entre
+              regras de negócio e camada HTTP, testes automatizados
+              e verificação dos exemplos publicados na documentação.
+            </p>
+
+            <ul class="projeto-indicadores" aria-label="Destaques do projeto Python">
+              <li>44 testes automatizados</li>
+              <li>Swagger interativo</li>
+              <li>CI/CD</li>
+            </ul>
+
+            <p class="projeto-tecnologias">
+              Python · FastAPI · Uvicorn · pytest · Requests ·
+              Decimal · pytest-html · OpenAPI · Swagger UI ·
+              GitHub Actions · Render
+            </p>
+
+            <details class="projeto-detalhes">
+              <summary>Ver detalhes técnicos</summary>
+
+              <div class="projeto-relato">
+                <h4>Regras e validação dos dados</h4>
+                <p>
+                  Verificação de idade, renda e valor solicitado,
+                  incluindo campos obrigatórios, tipos incorretos,
+                  precisão monetária e valores não finitos.
+                  Os valores monetários são tratados com Decimal.
+                </p>
+
+                <h4>Estratégia de testes</h4>
+                <p>
+                  Suíte com 44 testes: 25 testes unitários, 8 testes
+                  HTTP de disponibilidade e análise, 7 testes
+                  da documentação e 4 testes dos exemplos publicados
+                  no Swagger. As fixtures iniciam e encerram
+                  a API local automaticamente. São gerados
+                  relatórios HTML e JUnit XML.
+                </p>
+
+                <h4>Integração e implantação contínuas</h4>
+                <p>
+                  O GitHub Actions instala as dependências, verifica
+                  sua compatibilidade e executa os testes.
+                  O Render está configurado para publicar a versão
+                  da branch main após a aprovação das verificações
+                  de CI.
+                </p>
+
+                <h4>Demonstração interativa</h4>
+                <p>
+                  Swagger UI personalizado com modelos de entrada,
+                  resultado e erro. Os testes consultam os exemplos
+                  no OpenAPI, enviam seus dados à API e verificam
+                  os resultados de aprovação e reprovação,
+                  ajudando a manter a documentação coerente
+                  com o comportamento da aplicação.
+                </p>
+              </div>
+            </details>
+
+            <div class="projeto-links">
+              <a
+                class="botao botao-principal"
+                href="https://github.com/LeticiaGBrito/qa-credito-api-python"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ver código do projeto Python no GitHub"
+              >
+                Ver código
+              </a>
+
+              <a
+                class="botao botao-secundario"
+                href="https://github.com/LeticiaGBrito/qa-credito-api-python/actions"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ver testes e relatórios do projeto Python"
+              >
+                Testes e relatórios
+              </a>
+
+              <a
+                class="link-projeto"
+                href="https://qa-credito-api-python.onrender.com/docs"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Experimentar a API Python no Swagger"
+              >
+                Experimentar API no Swagger ↗
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <p class="nota-projetos">
+          As APIs são demonstrações educacionais. Utilize apenas dados
+          fictícios. A hospedagem gratuita pode demorar na primeira
+          chamada após um período de inatividade.
+        </p>
+
+        <h3 class="subtitulo-grupo subtitulo-casos">
+          Estudos de caso profissionais
+        </h3>
+
+        <p class="descricao-grupo">
+          Exemplos da minha atuação em automação, investigação
+          de falhas e validação de integrações.
         </p>
 
         <div class="cards">
@@ -240,7 +469,7 @@
             </p>
 
             <details class="projeto-detalhes">
-              <summary>Ver detalhes</summary>
+              <summary>Ver estudo de caso</summary>
 
               <div class="projeto-relato">
                 <h4>Contexto e desafio</h4>
@@ -285,7 +514,7 @@
             </p>
 
             <details class="projeto-detalhes">
-              <summary>Ver detalhes</summary>
+              <summary>Ver estudo de caso</summary>
 
               <div class="projeto-relato">
                 <h4>Contexto e desafio</h4>
@@ -308,8 +537,7 @@
                   A investigação revelou o risco de a operação
                   desativar dados de outro produto, além daquele
                   relacionado ao evento. O caso demonstrou a importância
-                  de validar os efeitos da operação nos demais produtos,
-                  e não apenas o fluxo principal.
+                  de validar os efeitos da operação nos demais produtos.
                 </p>
               </div>
             </details>
@@ -331,7 +559,7 @@
             </p>
 
             <details class="projeto-detalhes">
-              <summary>Ver detalhes</summary>
+              <summary>Ver estudo de caso</summary>
 
               <div class="projeto-relato">
                 <h4>Contexto e desafio</h4>
@@ -366,6 +594,7 @@
     <!-- Contato -->
     <section id="contato" class="secao contato">
       <div class="container">
+        <p class="rotulo-secao">Contato</p>
         <h2 class="titulo-secao">Vamos conversar?</h2>
 
         <p>
@@ -404,9 +633,17 @@
           >
             Enviar e-mail
           </a>
+
+          <a
+            class="botao botao-secundario"
+            href="https://github.com/LeticiaGBrito"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
         </div>
 
-        <!-- E-mail visível abaixo dos botões -->
         <p class="contato-email">
           Ou envie uma mensagem para:
           <a href="mailto:leticiagbgs32@gmail.com">
@@ -417,7 +654,6 @@
     </section>
   </main>
 
-  <!-- Rodapé -->
   <footer class="rodape">
     <div class="container">
       <p>
