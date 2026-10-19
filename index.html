@@ -233,16 +233,16 @@
         <h3 class="subtitulo-grupo">Projetos com código público</h3>
 
         <p class="descricao-grupo">
-          Projetos de testes de APIs com Java e Python e automação web
-          com Selenium, incluindo regras fictícias de crédito,
-          relatórios de execução e integração contínua.
+          Quatro projetos independentes: testes de APIs e automação
+          web com Java e Python, incluindo regras fictícias de crédito,
+          relatórios de execução, integração contínua e demonstrações públicas.
         </p>
 
         <div class="cards cards-projetos">
           <!-- Projeto API Java -->
           <article class="card projeto-card projeto-destaque">
             <span class="projeto-categoria">
-              Projeto educacional · Java
+              Projeto educacional · API · Java
             </span>
 
             <h3>API de Crédito com Java</h3>
@@ -345,7 +345,7 @@
           <!-- Projeto API Python -->
           <article class="card projeto-card projeto-destaque">
             <span class="projeto-categoria">
-              Projeto educacional · Python
+              Projeto educacional · API · Python
             </span>
 
             <h3>API de Crédito com Python</h3>
@@ -556,6 +556,144 @@
                 aria-label="Abrir o simulador de crédito do projeto web Python"
               >
                 Experimentar simulador de crédito ↗
+              </a>
+
+              <a
+                class="link-projeto"
+                href="https://qa-credito-web-python.onrender.com/docs"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abrir a documentação Swagger do projeto web Python"
+              >
+                Consultar documentação Swagger ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- Projeto de automação web Java -->
+          <article class="card projeto-card projeto-destaque">
+            <span class="projeto-categoria">
+              Projeto educacional · Web · Java
+            </span>
+
+            <h3>Automação Web com Java</h3>
+
+            <p class="projeto-resumo">
+              Automação de um simulador fictício de crédito com Selenium,
+              validando regras de negócio, campos obrigatórios,
+              entradas inválidas e comportamento do formulário.
+            </p>
+
+            <ul
+              class="projeto-indicadores"
+              aria-label="Destaques da automação web com Java"
+            >
+              <li>25 testes automatizados</li>
+              <li>Page Objects</li>
+              <li>CI com Chrome</li>
+            </ul>
+
+            <p class="projeto-tecnologias">
+              Java 17 · Selenium · JUnit 5 · Gradle · WebDriverWait ·
+              BigDecimal · Gson · Swagger UI · Docker ·
+              GitHub Actions · Render
+            </p>
+
+            <details class="projeto-detalhes">
+              <summary>Ver detalhes técnicos</summary>
+
+              <div class="projeto-relato">
+                <h4>Cenários e verificações</h4>
+                <p>
+                  Suíte com 25 testes: 24 cenários do simulador e
+                  1 teste de verificação do ambiente Selenium.
+                  Os cenários contemplam aprovação, reprovação,
+                  valores de fronteira, múltiplos motivos,
+                  campos obrigatórios, entradas inválidas,
+                  formatos decimais e limpeza do formulário.
+                </p>
+
+                <h4>Organização da automação</h4>
+                <p>
+                  Page Objects encapsulam os localizadores e as
+                  ações da interface. A BasePage centraliza
+                  interações reutilizáveis e esperas explícitas
+                  com WebDriverWait. Os testes utilizam JUnit 5,
+                  parametrização e uma nova sessão do Chrome
+                  para cada cenário.
+                </p>
+
+                <h4>Execução independente</h4>
+                <p>
+                  O projeto inclui sua própria aplicação Java,
+                  com HttpServer do JDK e regras monetárias
+                  implementadas com BigDecimal. Os testes do
+                  simulador iniciam o servidor em uma porta local
+                  disponível e o encerram ao final de cada classe,
+                  sem depender dos outros projetos ou do Render.
+                </p>
+
+                <h4>Relatórios e evidências</h4>
+                <p>
+                  O Gradle gera relatórios HTML e JUnit XML.
+                  Uma extensão do JUnit tenta capturar a tela
+                  quando ocorre uma falha de preparação ou execução,
+                  antes do encerramento do navegador. Os PNGs
+                  são salvos separadamente do relatório HTML.
+                </p>
+
+                <h4>Integração contínua e hospedagem</h4>
+                <p>
+                  O GitHub Actions executa os testes em Ubuntu,
+                  com Java 17 e Chrome em modo headless,
+                  disponibilizando relatórios e evidências como
+                  artefatos. A aplicação demonstrativa está
+                  hospedada no Render em uma imagem Docker,
+                  com simulador e documentação Swagger.
+                  Os testes do CI utilizam sua própria instância local.
+                </p>
+              </div>
+            </details>
+
+            <div class="projeto-links">
+              <a
+                class="botao botao-principal"
+                href="https://github.com/LeticiaGBrito/qa-credito-web-java"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ver código da automação web com Java no GitHub"
+              >
+                Ver código
+              </a>
+
+              <a
+                class="botao botao-secundario"
+                href="https://github.com/LeticiaGBrito/qa-credito-web-java/actions"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ver testes e relatórios da automação web com Java"
+              >
+                Testes e relatórios
+              </a>
+
+              <a
+                class="link-projeto"
+                href="https://qa-credito-web-java.onrender.com/simulador"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abrir o simulador de crédito do projeto web Java"
+              >
+                Experimentar simulador de crédito ↗
+              </a>
+
+              <a
+                class="link-projeto"
+                href="https://qa-credito-web-java.onrender.com/docs"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abrir a documentação Swagger do projeto web Java"
+              >
+                Consultar documentação Swagger ↗
               </a>
             </div>
           </article>
