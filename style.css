@@ -54,6 +54,7 @@ h3,
 h4 {
   color: var(--azul);
   line-height: 1.2;
+  overflow-wrap: break-word;
 }
 
 a:focus-visible,
@@ -101,6 +102,7 @@ summary:focus-visible {
   display: flex;
   align-items: center;
   gap: 14px;
+  min-width: 0;
   color: var(--azul);
   text-decoration: none;
   font-weight: bold;
@@ -143,6 +145,7 @@ summary:focus-visible {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  max-width: 100%;
   padding: 7px 14px;
   border-radius: 30px;
   background: var(--verde-claro);
@@ -195,6 +198,7 @@ h1 {
   justify-content: center;
   align-items: center;
   min-height: 46px;
+  max-width: 100%;
   padding: 12px 22px;
   border: 1px solid var(--verde);
   border-radius: 6px;
@@ -203,6 +207,7 @@ h1 {
   font-size: 14px;
   font-weight: bold;
   line-height: 1.5;
+  overflow-wrap: break-word;
   transition:
     background-color 0.2s,
     border-color 0.2s,
@@ -369,9 +374,9 @@ h1 {
   align-items: start;
 }
 
-/* Projetos públicos têm a mesma altura por linha. */
+/* Três projetos por linha em telas grandes. */
 #projetos .cards-projetos {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: stretch;
 }
 
@@ -386,6 +391,7 @@ h1 {
 
 .projeto-categoria {
   align-self: flex-start;
+  max-width: 100%;
   margin-bottom: 18px;
   padding: 5px 10px;
   border-radius: 20px;
@@ -426,6 +432,7 @@ h1 {
 }
 
 .projeto-indicadores li {
+  max-width: 100%;
   padding: 5px 10px;
   border: 1px solid #c5ded9;
   border-radius: 6px;
@@ -478,11 +485,10 @@ h1 {
   margin-bottom: 0;
 }
 
-/* Botões e links padronizados nos dois projetos */
+/* Botões padronizados nos projetos públicos. */
 .projeto-links {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  align-items: stretch;
+  grid-template-columns: minmax(0, 1fr);
   gap: 12px;
   margin-top: auto;
   padding-top: 24px;
@@ -490,12 +496,13 @@ h1 {
 
 .projeto-links .botao {
   min-width: 0;
+  width: 100%;
   padding-inline: 12px;
 }
 
 .link-projeto {
-  grid-column: 1 / -1;
   margin-top: 4px;
+  padding-block: 4px;
   color: var(--verde);
   font-size: 14px;
   font-weight: bold;
@@ -508,7 +515,7 @@ h1 {
   color: var(--azul);
 }
 
-/* Informação sobre as APIs públicas */
+/* Informação sobre as demonstrações públicas. */
 .nota-projetos {
   margin: 22px 0 0;
   padding: 16px 18px;
@@ -581,9 +588,14 @@ h1 {
 /* ========================================
    TABLETS
 ======================================== */
-@media (min-width: 701px) and (max-width: 1000px) {
-  .cards {
+@media (min-width: 701px) and (max-width: 1100px) {
+  .cards,
+  #projetos .cards-projetos {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .navegacao {
+    flex-wrap: wrap;
   }
 
   .menu {
@@ -592,10 +604,6 @@ h1 {
 
   .marca {
     font-size: 14px;
-  }
-
-  .projeto-links {
-    grid-template-columns: 1fr;
   }
 }
 
@@ -631,7 +639,7 @@ h1 {
 
   .cards,
   #projetos .cards-projetos {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .card {
@@ -674,14 +682,6 @@ h1 {
   .marca {
     gap: 10px;
     font-size: 14px;
-  }
-
-  .projeto-links {
-    grid-template-columns: 1fr;
-  }
-
-  .projeto-links .botao {
-    width: 100%;
   }
 
   .disponibilidade {

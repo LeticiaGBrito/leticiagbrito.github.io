@@ -14,7 +14,7 @@
 
   <meta
     name="description"
-    content="Portfólio de Letícia Gonçalves Garcia, QA Sênior. Experiência em automação web, APIs, mobile e integrações. Projetos com Java e Python, testes automatizados e CI/CD."
+    content="Portfólio de Letícia Gonçalves Garcia, QA Sênior. Experiência em automação web, APIs, mobile e integrações. Projetos com Java, Python, Selenium e integração contínua."
   >
 
   <link rel="stylesheet" href="style.css">
@@ -233,13 +233,13 @@
         <h3 class="subtitulo-grupo">Projetos com código público</h3>
 
         <p class="descricao-grupo">
-          Duas implementações de uma API fictícia de análise de crédito,
-          com testes automatizados, documentação interativa e publicação
-          na nuvem.
+          Projetos de testes de APIs com Java e Python e automação web
+          com Selenium, incluindo regras fictícias de crédito,
+          relatórios de execução e integração contínua.
         </p>
 
         <div class="cards cards-projetos">
-          <!-- Projeto Java -->
+          <!-- Projeto API Java -->
           <article class="card projeto-card projeto-destaque">
             <span class="projeto-categoria">
               Projeto educacional · Java
@@ -253,7 +253,10 @@
               valores de fronteira e entradas inválidas.
             </p>
 
-            <ul class="projeto-indicadores" aria-label="Destaques do projeto Java">
+            <ul
+              class="projeto-indicadores"
+              aria-label="Destaques do projeto API Java"
+            >
               <li>35 testes automatizados</li>
               <li>Swagger interativo</li>
               <li>CI/CD</li>
@@ -312,7 +315,7 @@
                 href="https://github.com/LeticiaGBrito/qa-credito-api"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Ver código do projeto Java no GitHub"
+                aria-label="Ver código do projeto API Java no GitHub"
               >
                 Ver código
               </a>
@@ -322,7 +325,7 @@
                 href="https://github.com/LeticiaGBrito/qa-credito-api/actions"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Ver testes e relatórios do projeto Java"
+                aria-label="Ver testes e relatórios do projeto API Java"
               >
                 Testes e relatórios
               </a>
@@ -339,7 +342,7 @@
             </div>
           </article>
 
-          <!-- Projeto Python -->
+          <!-- Projeto API Python -->
           <article class="card projeto-card projeto-destaque">
             <span class="projeto-categoria">
               Projeto educacional · Python
@@ -353,7 +356,10 @@
               e verificação dos exemplos publicados na documentação.
             </p>
 
-            <ul class="projeto-indicadores" aria-label="Destaques do projeto Python">
+            <ul
+              class="projeto-indicadores"
+              aria-label="Destaques do projeto API Python"
+            >
               <li>44 testes automatizados</li>
               <li>Swagger interativo</li>
               <li>CI/CD</li>
@@ -414,7 +420,7 @@
                 href="https://github.com/LeticiaGBrito/qa-credito-api-python"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Ver código do projeto Python no GitHub"
+                aria-label="Ver código do projeto API Python no GitHub"
               >
                 Ver código
               </a>
@@ -424,7 +430,7 @@
                 href="https://github.com/LeticiaGBrito/qa-credito-api-python/actions"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Ver testes e relatórios do projeto Python"
+                aria-label="Ver testes e relatórios do projeto API Python"
               >
                 Testes e relatórios
               </a>
@@ -440,12 +446,125 @@
               </a>
             </div>
           </article>
+
+          <!-- Projeto de automação web Python -->
+          <article class="card projeto-card projeto-destaque">
+            <span class="projeto-categoria">
+              Projeto educacional · Web · Python
+            </span>
+
+            <h3>Automação Web com Python</h3>
+
+            <p class="projeto-resumo">
+              Automação de um simulador fictício de crédito com Selenium,
+              validando aprovação, reprovação, campos obrigatórios,
+              mensagens de erro e limpeza do formulário.
+            </p>
+
+            <ul
+              class="projeto-indicadores"
+              aria-label="Destaques da automação web com Python"
+            >
+              <li>24 testes web</li>
+              <li>Page Objects</li>
+              <li>CI com Chrome</li>
+            </ul>
+
+            <p class="projeto-tecnologias">
+              Python · Selenium · pytest · WebDriverWait · pytest-html ·
+              FastAPI · Uvicorn · GitHub Actions · Render
+            </p>
+
+            <details class="projeto-detalhes">
+              <summary>Ver detalhes técnicos</summary>
+
+              <div class="projeto-relato">
+                <h4>Cenários e verificações</h4>
+                <p>
+                  Suíte com 24 testes que contemplam aprovação, valores
+                  de fronteira, reprovação por múltiplos critérios,
+                  campos obrigatórios, entradas inválidas, separadores
+                  decimais e limpeza do formulário. As verificações
+                  incluem mensagens, foco e indicação de campos inválidos.
+                </p>
+
+                <h4>Organização da automação</h4>
+                <p>
+                  Page Objects separam os cenários dos localizadores
+                  e das ações da interface. A BasePage centraliza
+                  interações reutilizáveis e esperas explícitas
+                  com WebDriverWait. Cada teste utiliza uma nova
+                  sessão do Chrome.
+                </p>
+
+                <h4>Execução independente</h4>
+                <p>
+                  O repositório inclui a aplicação demonstrativa.
+                  Por padrão, as fixtures iniciam o servidor em uma
+                  porta local disponível e o encerram ao final
+                  da sessão. Após instalar as dependências, a suíte
+                  é executada com um único comando, sem iniciar
+                  outro projeto.
+                </p>
+
+                <h4>Relatórios e evidências</h4>
+                <p>
+                  A execução gera relatórios HTML e JUnit XML.
+                  Em falhas de preparação ou execução, quando
+                  o navegador está disponível, uma captura de tela
+                  é anexada ao relatório e salva também como arquivo PNG.
+                </p>
+
+                <h4>Integração contínua e demonstração</h4>
+                <p>
+                  O GitHub Actions executa os testes em Linux com
+                  Chrome em modo headless e disponibiliza os relatórios
+                  como artefato. A aplicação demonstrativa está
+                  publicada separadamente no Render para exploração
+                  manual. Os testes do CI utilizam sua própria
+                  instância local.
+                </p>
+              </div>
+            </details>
+
+            <div class="projeto-links">
+              <a
+                class="botao botao-principal"
+                href="https://github.com/LeticiaGBrito/qa-credito-web-python"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ver código da automação web com Python no GitHub"
+              >
+                Ver código
+              </a>
+
+              <a
+                class="botao botao-secundario"
+                href="https://github.com/LeticiaGBrito/qa-credito-web-python/actions"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ver testes e relatórios da automação web com Python"
+              >
+                Testes e relatórios
+              </a>
+
+              <a
+                class="link-projeto"
+                href="https://qa-credito-web-python.onrender.com/simulador"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abrir o simulador de crédito do projeto web Python"
+              >
+                Experimentar simulador de crédito ↗
+              </a>
+            </div>
+          </article>
         </div>
 
         <p class="nota-projetos">
-          As APIs são demonstrações educacionais. Utilize apenas dados
-          fictícios. A hospedagem gratuita pode demorar na primeira
-          chamada após um período de inatividade.
+          As aplicações são demonstrações educacionais.
+          Utilize apenas dados fictícios. A hospedagem gratuita
+          pode demorar no primeiro acesso após um período de inatividade.
         </p>
 
         <h3 class="subtitulo-grupo subtitulo-casos">
@@ -505,7 +624,9 @@
 
           <!-- Caso 2 -->
           <article class="card projeto-card">
-            <span class="projeto-categoria">Investigação de falhas</span>
+            <span class="projeto-categoria">
+              Investigação de falhas
+            </span>
 
             <h3>Falha de isolamento entre produtos</h3>
 
@@ -551,7 +672,9 @@
 
           <!-- Caso 3 -->
           <article class="card projeto-card">
-            <span class="projeto-categoria">Carga e processamento</span>
+            <span class="projeto-categoria">
+              Carga e processamento
+            </span>
 
             <h3>Validação de APIs e eventos sob carga</h3>
 
